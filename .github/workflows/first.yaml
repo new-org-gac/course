@@ -1,0 +1,13 @@
+name: yourname
+on: [push]
+
+jobs:
+ your-job-name:
+  runs-on: ubuntu-latest
+  steps:
+  - name: oneliner
+    run: echo "hello world"
+  - name: multiliner
+    run: |
+     node -v
+     npm -v  
