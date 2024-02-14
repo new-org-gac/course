@@ -1,0 +1,37 @@
+name: Workflow and shell
+on: [push]
+defaults:
+ shell: bash
+
+jobs:
+ Ubuntu:
+  runs-on: ubuntu-latest
+  steps:
+  - name: Ubuntu shell
+    run: |
+     pwd
+     ls
+     echo $GITHUB_SHA
+     echo $GITHUB_REPOSITORY
+     echo $GITHUB_WORKSPACE
+ 
+ Windows:
+  runs-on: windows-latest
+  shell: pwsh
+  steps:
+  - name: power shell
+    run: |
+     Get-Location
+     dir
+     echo $env:GITHUB_SHA
+     echo $env:GITHUB_REPOSITORY
+     echo $env:GITHUB_WORKSPACE
+  
+  - name: python
+    shell: python
+     run: |
+      import platform 
+      print(platform.processor())
+   
+  
+ 
