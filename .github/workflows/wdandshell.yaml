@@ -30,7 +30,7 @@ jobs:
      echo $env:GITHUB_REPOSITORY
      echo $env:GITHUB_WORKSPACE
   
-  - name: python
+  - name: Python shell
     shell: python
      run: |
       import platform 
