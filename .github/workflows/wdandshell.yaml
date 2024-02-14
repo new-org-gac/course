@@ -1,7 +1,8 @@
 name: Shell
 on: [push]
 defaults:
- shell: bash
+ run:
+  shell: bash
 
 jobs:
  Ubuntu:
@@ -17,7 +18,9 @@ jobs:
  
  Windows:
   runs-on: windows-latest
-  shell: pwsh
+  defaults:
+   run:
+    shell: pwsh
   steps:
   - name: power shell
     run: |
