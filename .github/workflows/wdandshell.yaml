@@ -1,4 +1,4 @@
-name: Workflow and shell
+name: Shell
 on: [push]
 defaults:
  shell: bash
