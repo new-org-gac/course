@@ -32,9 +32,9 @@ jobs:
   
   - name: Python shell
     shell: python
-     run: |
-      import platform 
-      print(platform.processor())
+    run: |
+     import platform 
+     print(platform.processor())
    
   
  
