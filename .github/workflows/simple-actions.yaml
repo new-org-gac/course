@@ -1,0 +1,15 @@
+name: Simple actions
+on: [push]
+
+jobs:
+ simple-actions:
+   runs-on: ubuntu-latest
+   steps:
+   - name: pulling from repo
+     id: greet
+     uses: actions/hello-world-javascript-action@e76147da8e5c81eaf017dede5645551d4b94427b
+     with: 
+      who-to-greet: Ali
+   - name: Greeting Time
+     run: echo "${{steps.greet.outputs.time}}"
+   
