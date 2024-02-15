@@ -2,7 +2,7 @@ name: repo in runner machines
 on: [push]
 
 jobs:
- downloading repo:
+ downloading_repo:
    runs-on: ubuntu-latest
    steps:
    - name: Before downloading
