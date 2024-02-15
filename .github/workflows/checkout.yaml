@@ -3,15 +3,17 @@ on: [push]
 
 jobs:
  downloading repo:
- - name: Before downloading
-   run: ls -la
- - name: Checkout
-   run: |
-    git init
-    git remote add origin "https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/$GITHUB_REPOSITORY.git"
-    git fetch origin
-    git checkout main
- - name: After downloading
-   run: ls -la
+   runs-on: ubuntu-latest
+   steps:
+   - name: Before downloading
+     run: ls -la
+   - name: Checkout
+     run: |
+      git init
+      git remote add origin "https://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/$GITHUB_REPOSITORY.git"
+      git fetch origin
+      git checkout main
+   - name: After downloading
+     run: ls -la
 
 
